@@ -15,21 +15,17 @@
       <h1 class="css_title js_title">Buscador de series</h1>
   </header>
   <main class="css_main js_main">
-      <form clas="css_form js_form" action="/signup" method="get">
+      <form clas="css_form js_form" action="signup">
 
-          <input id="search" type="text" class="js_input" placeholder=" Busca una serie">
+          <input id="search" type="search" placeholder=" Busca una serie" class="js_input">
           <button type="button" class="css_btn js_btn">Search</button>
       </form>
-      <div class="js_list_container">
-          <ul class="js_series_list">
-              <li class="js_series_list_item" id="">
-                  <div class="js_serie_container">
-                      <img class="js_serie_image" src="" alt="">
-                      <h2 class="js_serie_title"></h2>
-                  </div>
-              </li>
-          </ul>
-      </div>
+      <section class="css_series_section js_series_section">
+          <div class="css_favourites_series js_favourites_series"></div>
+          <div class="css_card_container js_card_container">
+              <ul class="css_series_list js_series_list"></ul>
+          </div>
+      </section>
   </main>
 
   <script src="./assets/js/main.js"></script>

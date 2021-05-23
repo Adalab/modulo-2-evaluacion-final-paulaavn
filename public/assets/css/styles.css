@@ -27,4 +27,7 @@ ul {
   background-color: #CCC;
   color: #000; }
 
+.css_series_section {
+  display: flex; }
+
 /*# sourceMappingURL=styles.css.map */
