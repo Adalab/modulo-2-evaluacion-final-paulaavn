@@ -17,19 +17,19 @@ function searchSerie(){
         .then(response => response.json())
         .then((data) => {
             arraySeries = data;
-            addListenersToCards();
+            
             for (let i = 0; i < data.length; i++){
                 const serieData = data[i].show;
                 const seriId = data[i].id;
                 if(serieData.image === null){
                     showsList.innerHTML += 
-                    `<li data-id="${serieData.id} class="js_favorite_cards js_li">
+                    `<li data-id="${serieData.id}" class="js_favorite_cards js_li">
                     <h2 class="js_serie_title">${serieData.name}</h2>
                     <img class="js_image" src= "https://via.placeholder.com/210x295/ffffff/666666/?text=TV"/>
                     </li>`;
                 }else{
                     showsList.innerHTML +=
-                    `<li data-id="${serieData.id} class="js_favorite_cards js_li">
+                    `<li data-id="${serieData.id}" class="js_favorite_cards js_li">
                     <h2 class="js_serie_title">${serieData.name}</h2>
                     <img class="js_image" src="${serieData.image.medium}"/>
                     </li>`;
@@ -37,7 +37,7 @@ function searchSerie(){
                 
                 
             } 
-          
+            addListenersToCards();
         });
      
 }
