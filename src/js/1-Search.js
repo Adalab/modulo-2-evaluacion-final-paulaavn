@@ -31,13 +31,13 @@ function searchSerie(){
                 if(serieData.image === null){
                     showsList.innerHTML += 
                     `<li data-id="${serieData.id} class="js_li">
-                    <h2 class="js_title">${serieData.name}</h2>
+                    <h2 class="js_serie_title">${serieData.name}</h2>
                     <img class="js_image" src= "https://via.placeholder.com/210x295/ffffff/666666/?text=TV"/>
                     </li>`;
                 }else{
                     showsList.innerHTML +=
                     `<li data-id="${serieData.id} class="js_li">
-                    <h2 class="js_title">${serieData.name}</h2>
+                    <h2 class="js_serie_title">${serieData.name}</h2>
                     <img class="js_image" src="${serieData.image.medium}"/>
                     </li>`;
                 }
