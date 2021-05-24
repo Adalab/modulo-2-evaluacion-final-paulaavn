@@ -17,26 +17,30 @@ function searchSerie(){
     fetch(`//api.tvmaze.com/search/shows?q=${selectedSerie}`)
         .then(response => response.json())
         .then((data) => {
-            addListenersToCards()
+            
             arraySeries = data;
             for (let i = 0; i < data.length; i++){
                 const serieData = data[i].show;
+                const seriId = data[i].id;
                 if(serieData.image === null){
                     showsList.innerHTML += 
-                    `<li data-id="${serieData.id} class="js_cards js_li">
+                    `<li data-id="${serieData.id} class="js_favorite_cards js_li">
                     <h2 class="js_serie_title">${serieData.name}</h2>
                     <img class="js_image" src= "https://via.placeholder.com/210x295/ffffff/666666/?text=TV"/>
                     </li>`;
                 }else{
                     showsList.innerHTML +=
-                    `<li data-id="${serieData.id} class="js_cards js_li">
+                    `<li data-id="${serieData.id} class="js_favorite_cards js_li">
                     <h2 class="js_serie_title">${serieData.name}</h2>
                     <img class="js_image" src="${serieData.image.medium}"/>
                     </li>`;
                 }
+                addListenersToCards()
+                
             } 
+          
         });
-        
+       
 }
 
 button.addEventListener("click", searchSerie);
@@ -44,19 +48,16 @@ button.addEventListener("click", searchSerie);
 
 'use strict';
 
-let choosenSeries = [];
-
 function addListenersToCards(){
-    const allCards = document.querySelectorAll(".js_cards");
+    const allCards = document.querySelectorAll(".js_favorite_cards");
         for (const card of allCards){
             card.addEventListener("click",handleClickCard);
         }
 }
 
 function handleClickCard(event){
-   const whereIAddedTheEvent = event.currentTarget;
-    const getId = whereIAddedTheEvent.serieData.id;
-    whereIAddedTheEvent.toggle('js_favourite_class');
+   const selectedCard = event.currentTarget;
+   selectedCard.classList.toggle('js_favourite_class');
 }
 
 
