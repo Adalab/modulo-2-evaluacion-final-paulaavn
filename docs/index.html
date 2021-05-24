@@ -1,79 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Awesome cards</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2? family = Merriweather: wght @ 700 & display = swap"
-      rel="hoja de estilo"
-      familia="Merriweather:"
-      wght
-      @
-      700;
-      900
-      &
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2? family = Open + Sans: wght @
-    600 & display = intercambiar " rel=" hoja de estilo " familia=Abierto +
-    Sans: wght @ 300; 600; 700 &>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2? family = Montserrat: wght @ 800 & display = swap"
-      rel="hoja de estilo"
-      familia="Montserrat:"
-      wght
-      @
-      300;
-      600;
-      800
-      &
-    />
 
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/db059d8dff.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscador de series</title>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 
-  <body>
-    
-    <main class="main-section">
-        <section class="section-header">
-            <img class="main-logo" src="./assets/images/logo-awesome-profile-cards.svg">
+</head>
 
-        </section>
-        <section class="main-section-1">
-            <h1 class="title">Crea tu tarjeta de visita</h1>
-            <p class="subtitle">Crea mejores contactos profesionales de forma fácil y cómoda</p>
-        </section>
-        <section class="main-section-2">
-            <div class="icon icon-text-1">
-                <i class="far fa-object-ungroup i-main"></i>
-                <p class="i-text design">diseña</p>
-            </div>
-            <div class="icon icon-text-2">
-                <i class="far fa-keyboard i-main"></i>
-                <p class="i-text fill">rellena</p>
-            </div>
-            <div class="icon icon-text-3">
-                <i class="fas fa-share-alt i-main"></i>
-                <p class="i-text">comparte</p>
-            </div>
-        </section>
-        <div class="boton">
-            <a class="boton-link-main" href="./content.html" title="start">comenzar</a>
-        </div>
-    </main>
-    <footer class="footer">
-        <small class="copy "> Awesome profile cards @ 2021 </small>
-        <img class="logo-adalab" src="./assets/images/logo-adalab.png" alt="logo logo-adalab" />
+<body>
 
-    </footer>
+  <header class="css_header js_header">
+      <h1 class="css_title js_title">Buscador de series</h1>
+  </header>
+  <main class="css_main js_main">
+      <form clas="css_form js_form" action="signup">
 
-    <script src="./assets/js/main.js"></script>
-  </body>
+          <input id="search" type="search" placeholder=" Busca una serie" class="js_input">
+          <button type="button" class="css_btn js_btn">Search</button>
+      </form>
+      <section class="css_series_section js_series_section">
+          <div class="css_favourites_series js_favourites_series">
+              <ul class="css_favourite_series js_favourite_series"></ul>
+          </div>
+          <div class="css_card_container js_card_container">
+              <ul class="css_series_list js_series_list"></ul>
+          </div>
+      </section>
+  </main>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>

@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 
 //1.ARRANCAR LA PÁGINA ---> 2. LEER EL VALOR DEL INPUT ----> 3.OBTENER LOS DATOS DE LA API ----> 4.GUARDAR LOS DATOS EN UN ARRAY ----> 5.LEER LA LISTA DE FAVORITOS DEL LOCAL STORAGE ----> 6.PINTAR -----> 7.ESCUCHAR EL BOTÓN
 
@@ -48,21 +47,3 @@ function searchSerie(){
 
 button.addEventListener("click", searchSerie);
 
-
-'use strict';
-
-
-'use strict';
-// const reloadButton = document.getElementById("#reload");
-// function reload() {
-//   location.reload();
-
-// }
-// reloadButton.addEventListener("click", reload, false);
-// ecuerda dar ID = reload al input en el html
-'use strict';
-
-
-
-
-//# sourceMappingURL=main.js.map

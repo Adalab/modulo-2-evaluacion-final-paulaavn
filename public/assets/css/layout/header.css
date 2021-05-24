@@ -1,0 +1,13 @@
+.css_header {
+  width: 100vw;
+  height: 120px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: black;
+  color: azure;
+  display: flex;
+  align-items: center; }
+
+.css_title {
+  margin-left: 40px; }
+
+/*# sourceMappingURL=header.css.map */
