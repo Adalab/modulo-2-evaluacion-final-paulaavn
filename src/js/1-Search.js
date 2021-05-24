@@ -16,8 +16,8 @@ function searchSerie(){
     fetch(`//api.tvmaze.com/search/shows?q=${selectedSerie}`)
         .then(response => response.json())
         .then((data) => {
-            
             arraySeries = data;
+            addListenersToCards();
             for (let i = 0; i < data.length; i++){
                 const serieData = data[i].show;
                 const seriId = data[i].id;
@@ -34,13 +34,14 @@ function searchSerie(){
                     <img class="js_image" src="${serieData.image.medium}"/>
                     </li>`;
                 }
-                addListenersToCards()
+                
                 
             } 
           
         });
-       
+     
 }
+
 
 button.addEventListener("click", searchSerie);
 
