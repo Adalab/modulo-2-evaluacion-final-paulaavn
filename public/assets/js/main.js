@@ -1,11 +1,15 @@
 'use strict';
-'use strict';
 
 const input = document.querySelector(".js_input");
 const button = document.querySelector(".js_btn");
-const showsList = document.querySelector(".js_series_list")
+const showsList = document.querySelector(".js_series_list");
+const favoritesList= document.querySelector(".js_favourite_series");
 
 let arraySeries = [];
+let favouriteSeriesArray =[];
+'use strict';
+
+
 
 function paintSeries(){
     showsList.innerHTML = '';
@@ -18,21 +22,20 @@ function searchSerie(){
         .then(response => response.json())
         .then((data) => {
             arraySeries = data;
-            
             for (let i = 0; i < data.length; i++){
                 const serieData = data[i].show;
-                const seriId = data[i].id;
+                const serieId = data[i].id;
                 if(serieData.image === null){
                     showsList.innerHTML += 
                     `<li data-id="${serieData.id}" class="js_favorite_cards js_li">
-                    <h2 class="js_serie_title">${serieData.name}</h2>
-                    <img class="js_image" src= "https://via.placeholder.com/210x295/ffffff/666666/?text=TV"/>
+                    <h3 class="css_serie_title js_serie_title">${serieData.name}</h3>
+                    <img class="css_image js_image" src= "https://via.placeholder.com/210x295/ffffff/666666/?text=TV"/>
                     </li>`;
                 }else{
                     showsList.innerHTML +=
                     `<li data-id="${serieData.id}" class="js_favorite_cards js_li">
-                    <h2 class="js_serie_title">${serieData.name}</h2>
-                    <img class="js_image" src="${serieData.image.medium}"/>
+                    <h3 class="css_serie_title js_serie_title">${serieData.name}</h3>
+                    <img class="css_image js_image" src="${serieData.image.medium}"/>
                     </li>`;
                 }
                 
@@ -59,11 +62,48 @@ function addListenersToCards(){
 }
 
 function handleClickCard(event){
-    console.log(event.currentTarget);
-   let selectedCard = event.currentTarget;
-   selectedCard.classList.toggle("js_favorite_class");
+const selectedCard = event.currentTarget;
+   selectedCard.classList.toggle("js_favorite_class"); 
+
+   if(selectedCard.classList.contains("js_favorite_class")){
+    favouriteSeriesArray.push(selectedCard)
+    console.log(favouriteSeriesArray);
+   }
+   console.log(selectedCard);
 }
 
+function paintFavoriteList(){
+
+    for(let i = 0; i < favouriteSeriesArray.length; i++){
+        favoritesList.innerHTML += `<li>${selectedCard}</li>`;
+    }
+        
+}
+// const favoritesSeriesToSave = favouriteSeriesArray.find(showsList.classList.contains("js_favorite_class"));
+// console.log(favoritesSeriesToSave);
+
+
+// let newList= document.querySelector(".js_favourite_series");
+// newList.innerHTML = `<li class="new_list_cards">
+//                     <h2 class="js_serie_title">${favouriteSeriesArray.name}</h2>
+//                     <img class="js_image" src= "${favouriteSeriesArray.image.medium}"/>
+//                     </li>`;
+
+
+
+
+
+
+
+
+// // function saveFavoriteSeries (){
+// //    let favoriteItem = selectedCard;
+// //    const newList = document.querySelector(".js_favourite_series");
+// //    if(selectedCard.classList.contain("js_favorite_class")){
+// //        newList.innerHTML = favoriteItem
+// //    }    
+    
+// }
 
 'use strict';
 // const reloadButton = document.getElementById("#reload");

@@ -27,6 +27,25 @@ ul {
   background-color: #CCC;
   color: #000; }
 
+body {
+  background-color: gray; }
+
+.css_input {
+  height: 40px;
+  width: 300px;
+  margin-left: 30px;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-size: 25px; }
+
+.css_btn {
+  height: 40px;
+  width: 80px;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: purple;
+  color: whitesmoke; }
+
 .css_series_section {
   display: flex;
   flex-direction: row;
@@ -51,13 +70,41 @@ ul {
   color: white;
   background-color: gray; }
 
+.css_favourites_series {
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-right: 20px; }
+
+.css-favorites_title {
+  color: gray;
+  font-size: 30px;
+  margin-top: 25px; }
+
+.css_image {
+  height: 250px; }
+
+.js_li {
+  padding: 20px;
+  background-color: darkgray;
+  border-radius: 25px;
+  margin: 5px 5px 5px 5px; }
+
+.css_serie_title {
+  font-size: 20px;
+  background-color: darkgray; }
+
 .js_favorite_class {
-  color: purple;
-  border: double 2px pink; }
+  border: double 10px purple;
+  opacity: 0.5;
+  border-radius: 25px; }
 
 .css_header {
   width: 100vw;
   height: 120px;
+  font-size: 30px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background-color: black;
   color: azure;
