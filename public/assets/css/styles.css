@@ -53,7 +53,7 @@ ul {
 
 .js_favourite_class {
   color: purple;
-  background-color: pink; }
+  border: double 2px pink; }
 
 .css_header {
   width: 100vw;
