@@ -69,13 +69,34 @@ const selectedCardId = parseInt(selectedCard.dataset.id);
    if(selectedCard.classList.contains("js_favorite_class")){
     favouriteSeriesArray.push(selectedCard)
    }
-  const findFavCard = favouriteSeriesArray.find(serieData => serieData.id === selectedCardId);
-
-   console.log(findFavCard);
+  const findFavCard = favouriteSeriesArray.find((favSer) => favSer.id === selectedCardId);
+//   createFavList()
+    console.log(findFavCard);
    console.log(selectedCardId);
    console.log(favouriteSeriesArray);
 }
 
+function createFavList(){
+    for(let i = 0; i < favouriteSeriesArray.length; i++){
+        let data2 = favouriteSeriesArray[i].show;
+        let listFavSeries = {};
+        listFavSeries.name = data2.name;
+        listFavSeries.id = data2.id;
+        if(listFavSeries.image === null){
+        favoritesList.innerHTML += 
+        `<li data-id="${listFavSeries.id}" class="js_favorite_cards js_li">
+        <h3 class="css_serie_title js_serie_title">${data2.name}</h3>
+        <img class="css_image js_image" src= "https://via.placeholder.com/210x295/ffffff/666666/?text=TV"/>
+        </li>`;
+        }else{
+        favoritesList.innerHTML +=
+        `<li data-id="${data2.id}" class="js_favorite_cards js_li">
+        <h3 class="css_serie_title js_serie_title">${data2.name}</h3>
+        <img class="css_image js_image" src="${data2.image.medium}"/>
+        </li>`;
+        }
+    }
+}
     
 // function paintFavoriteList(){
     
