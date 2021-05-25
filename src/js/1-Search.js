@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 function paintSeries(){
     showsList.innerHTML = '';
     searchSerie();

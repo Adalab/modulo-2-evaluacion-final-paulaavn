@@ -9,8 +9,6 @@ let arraySeries = [];
 let favouriteSeriesArray =[];
 'use strict';
 
-
-
 function paintSeries(){
     showsList.innerHTML = '';
     searchSerie();
@@ -69,9 +67,9 @@ const selectedCardId = parseInt(selectedCard.dataset.id);
    if(selectedCard.classList.contains("js_favorite_class")){
     favouriteSeriesArray.push(selectedCard)
    }
-  const findFavCard = favouriteSeriesArray.find((favSer) => favSer.id === selectedCardId);
-//   createFavList()
-    console.log(findFavCard);
+  //const findFavCard = favouriteSeriesArray.find((favSer) => favSer.id === selectedCardId);
+//createFavList()
+    //console.log(findFavCard);
    console.log(selectedCardId);
    console.log(favouriteSeriesArray);
 }
