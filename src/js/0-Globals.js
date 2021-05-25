@@ -7,3 +7,5 @@ const favoritesList= document.querySelector(".js_favourite_series");
 
 let arraySeries = [];
 let favouriteSeriesArray =[];
+let newArray =[];
+

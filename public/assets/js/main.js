@@ -7,6 +7,9 @@ const favoritesList= document.querySelector(".js_favourite_series");
 
 let arraySeries = [];
 let favouriteSeriesArray =[];
+let newArray =[];
+
+
 'use strict';
 
 function paintSeries(){
@@ -64,9 +67,6 @@ const selectedCard = event.currentTarget;
 const selectedCardId = parseInt(selectedCard.dataset.id);
    selectedCard.classList.toggle("js_favorite_class"); 
 
-//    if(selectedCard.classList.contains("js_favorite_class")){
-//     favouriteSeriesArray.push(selectedCard)
-//    }
   const findFavCard = arraySeries.find((favSer) => favSer.show.id === selectedCardId);
     favouriteSeriesArray.push(findFavCard);
     createFavList()
@@ -85,79 +85,53 @@ function createFavList(){
         listFavSeries.id = data2.id;
         if(listFavSeries.image === null){
         favoritesList.innerHTML += 
-        `<li data-id="${listFavSeries.id}" class="js_favorite_cards js_li">
+        `<li data-id="${listFavSeries.id}" class="js_favorite_cards js_li js_fav_card">
         <h3 class="css_serie_title js_serie_title">${data2.name}</h3>
         <img class="css_image js_image" src= "https://via.placeholder.com/210x295/ffffff/666666/?text=TV"/>
+        <i class="fas fa-times-circle js_close_btn"></i>
         </li>`;
         }else{
         favoritesList.innerHTML +=
-        `<li data-id="${data2.id}" class="js_favorite_cards js_li">
+        `<li data-id="${data2.id}" class="js_favorite_cards js_li js_fav_card">
         <h3 class="css_serie_title js_serie_title">${data2.name}</h3>
         <img class="css_image js_image" src="${data2.image.medium}"/>
+        <i class="fas fa-times-circle js_close_btn"></i>
         </li>`;
         }
     }
 }
     
-// function paintFavoriteList(){
-    
-//   favoritesList.innerHTML = "";
-//     favouriteSeriesArray = favData;
-//      for(let i = 0; i < favData.length; i++){
-//         const favSerieData = favData[i].show;
-//         const favSerieId = favData[i].id;
-//         if(favSerieData.image === null){
-//             favoritesList.innerHTML += 
-//             `<li data-id="${favSerieData.id}" class="js_favorite_cards js_li">
-//             <h3 class="css_serie_title js_serie_title">${favSerieData.name}</h3>
-//             <img class="css_image js_image" src= "https://via.placeholder.com/210x295/ffffff/666666/?text=TV"/>
-//             </li>`;
-//         }else{
-//             favoritesList.innerHTML +=
-//             `<li data-id="${favSerieData.id}" class="js_favorite_cards js_li">
-//             <h3 class="css_serie_title js_serie_title">${favSerieData.name}</h3>
-//             <img class="css_image js_image" src="${favSerieData.image.medium}"/>
-//             </li>`;
-//         }
-//     } 
-        
-// }
-
-
-// // const favoritesSeriesToSave = favouriteSeriesArray.find(showsList.classList.contains("js_favorite_class"));
-// // console.log(favoritesSeriesToSave);
-
-
-// // let newList= document.querySelector(".js_favourite_series");
-// // newList.innerHTML = `<li class="new_list_cards">
-// //                     <h2 class="js_serie_title">${favouriteSeriesArray.name}</h2>
-// //                     <img class="js_image" src= "${favouriteSeriesArray.image.medium}"/>
-// //                     </li>`;
 
 
 
-
-
-
-
-
-// // function saveFavoriteSeries (){
-// //    let favoriteItem = selectedCard;
-// //    const newList = document.querySelector(".js_favourite_series");
-// //    if(selectedCard.classList.contain("js_favorite_class")){
-// //        newList.innerHTML = favoriteItem
-// //    }    
-    
-// }
 
 'use strict';
-// const reloadButton = document.getElementById("#reload");
-// function reload() {
-//   location.reload();
+
+// const  deleteButton = document.querySelector(".js_close_btn")
+
+// function deleteFavorite(){
 
 // }
-// reloadButton.addEventListener("click", reload, false);
-// ecuerda dar ID = reload al input en el html
+
+// deleteButton.addEventListener("click", deleteFavorite);
+
+'use strict';
+
+
+
+// localStorage.setItem("newArray", JSON.stringify(favouriteSeriesArray));
+// JSON.parse(localStorage.getItem("favouriteSeriesArray)"));
+
+
+
+// if (localStorage.getItem("newArray")){
+//     newArray = JSON.parse(localStorage.getItem("newArray"));
+// }
+
+// if  (localStorage.getItem("favouriteSeriesArray")){
+//     favouriteSeriesArray = JSON.parse(localStorage.getItem("favouriteSeriesArray"));
+//     createFavList();
+// }
 'use strict';
 
 

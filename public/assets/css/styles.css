@@ -87,6 +87,15 @@ body {
   opacity: 0.5;
   border-radius: 25px; }
 
+.js_fav_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.fas {
+  margin-top: 10px; }
+
 .css_header {
   width: 100vw;
   height: 120px;

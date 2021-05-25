@@ -1,8 +1,9 @@
 'use strict';
-// const reloadButton = document.getElementById("#reload");
-// function reload() {
-//   location.reload();
+
+// const  deleteButton = document.querySelector(".js_close_btn")
+
+// function deleteFavorite(){
 
 // }
-// reloadButton.addEventListener("click", reload, false);
-// ecuerda dar ID = reload al input en el html
+
+// deleteButton.addEventListener("click", deleteFavorite);
