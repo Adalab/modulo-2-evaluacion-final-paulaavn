@@ -14,17 +14,20 @@ const selectedCard = event.currentTarget;
 const selectedCardId = parseInt(selectedCard.dataset.id);
    selectedCard.classList.toggle("js_favorite_class"); 
 
-   if(selectedCard.classList.contains("js_favorite_class")){
-    favouriteSeriesArray.push(selectedCard)
-   }
-  //const findFavCard = favouriteSeriesArray.find((favSer) => favSer.id === selectedCardId);
-//createFavList()
-    //console.log(findFavCard);
+//    if(selectedCard.classList.contains("js_favorite_class")){
+//     favouriteSeriesArray.push(selectedCard)
+//    }
+  const findFavCard = arraySeries.find((favSer) => favSer.show.id === selectedCardId);
+    favouriteSeriesArray.push(findFavCard);
+    createFavList()
+    
+    console.log(findFavCard);
    console.log(selectedCardId);
    console.log(favouriteSeriesArray);
 }
 
 function createFavList(){
+    favoritesList.innerHTML = '';
     for(let i = 0; i < favouriteSeriesArray.length; i++){
         let data2 = favouriteSeriesArray[i].show;
         let listFavSeries = {};
